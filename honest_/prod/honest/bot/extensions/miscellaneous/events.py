@@ -29,11 +29,11 @@ class MiscellaneousEvents(Cog):
             "worker_ids": [],
             "worker_tokens": iteration(
                 [
-                    "wewe",
-                    "wewewe",
-                    "we",
-                    "wewe",
-                    "wwewe",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
                 ]
             ),
         }
