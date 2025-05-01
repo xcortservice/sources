@@ -29,11 +29,11 @@ class MiscellaneousEvents(Cog):
             "worker_ids": [],
             "worker_tokens": iteration(
                 [
-                    "OTEyMjY4MzU4NDE2NzU2ODE2.GxPVhK.OxJ05Kt7FZweD63iMauWHDxjCzFpqkuqugNRmg",
-                    "OTcxMTc4NTgzNDcxMDM0NDM5.GyMA8j.d8ItR_aT50QJVp2-ITrfKO4JYtW2aPToFceXGA",
-                    "NzAwNTMxNzg2OTk1OTkwNTg5.GlE6fs.O-wEk6FFxbu5D70jtb_h_zKREmG79h-ulpPDb0",
-                    "MTA1NzI4MjU0MjA3MzU1NzA3Mg.Ganlz5.ntz2uR2D-FjAxTOphRc3NJd6ZSiRp6J2w2_qi0",
-                    "NzU5ODQ1NTg5MzQ5MDQwMTU5.GVh4Qa.DR4qsvtWuzxTzpQKkh2yNlB0oRrRASaWHz-HvM",
+                    "wewe",
+                    "wewewe",
+                    "we",
+                    "wewe",
+                    "wwewe",
                 ]
             ),
         }
