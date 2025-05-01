@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Vesta"
+version = "1.0.0"
+description = "An all in one bot dedicated to providing the best experience to the best servers on Discord."
+authors = [
+    { name = "Samuel Davis", email = "sam@egirls.sh" }
+]
+dependencies = [
+    "git+https://github.com/rapptz/discord.py",
+    "git+https://github.com/pydantic/pydantic",
+    "git+https://github.com/Krukov/cashews",
+    "git+https://github.com/MagicStack/asyncpg",
+    "redis",
+    "git+https://github.com/pydantic/pydantic-settings",
+    "git+https://github.com/scarletcafe/jishaku"
+]
+
+[tool.setuptools]
+packages = ["vesta"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

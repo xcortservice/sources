@@ -1,0 +1,4642 @@
+[
+    {
+        "name": "audit",
+        "description": "View server audit log entries.",
+        "category": "Moderation",
+        "permissions": [
+            "view_audit_log"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "action",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "backup",
+        "description": "Backup the server layout and settings.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "newusers",
+        "description": "View a list of the newest members.\n\nThis is useful to check for suspicious members.\nThe amount parameter is limited to 100 results.",
+        "category": "Moderation",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "amount",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "seek",
+        "description": "Seek to a specific position.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "position",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "tiktokvideo",
+        "description": "Download content from TikTok",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "url",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "kick",
+        "description": "Kick a member from the server.",
+        "category": "Moderation",
+        "permissions": [
+            "kick_members"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "instagram",
+        "description": "Download content from Instagram",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "url",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "resume",
+        "description": "Resume the current track.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "autoplay",
+        "description": "Add autoplay recommendations to the queue",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "amount",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "fn",
+        "description": "Force a member's nickname.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_nicknames"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "nickname",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "jishaku",
+        "description": "The Jishaku debug and diagnostic commands.\n\nThis command on its own gives a status brief.\nAll other functionality is within its subcommands.",
+        "category": "Jishaku",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "volume",
+        "description": "Change the volume.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "volume",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "ban",
+        "description": "Ban a user from the server.",
+        "category": "Moderation",
+        "permissions": [
+            "ban_members"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "history",
+                "optional": true
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "subscription",
+        "description": "Check instance subscription status",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "hardbanlist",
+        "description": "View all hard banned users.",
+        "category": "Moderation",
+        "permissions": [
+            "ban_members"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "setlink",
+        "description": "Set a social media link for a user",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "type",
+                "optional": false
+            },
+            {
+                "name": "url",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "skip",
+        "description": "Skip the current track.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "links",
+        "description": "View someone's social media links",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "status",
+        "description": "Check shard status.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "massban",
+        "description": "Ban multiple users from the server.\n\nThis command is limited to 150 users at a time.\nIf you want to hard ban users, add `--hardban` to the reason.",
+        "category": "Moderation",
+        "permissions": [
+            "ban_members"
+        ],
+        "parameters": [
+            {
+                "name": "users",
+                "optional": false
+            },
+            {
+                "name": "history",
+                "optional": true
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "whois",
+        "description": "Fetch information about a Discord user.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "embed",
+        "description": "Parse a script into an embed.",
+        "category": "Utility",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": [
+            {
+                "name": "script",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "shuffle",
+        "description": "Shuffle the queue.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "removelink",
+        "description": "Remove a social media link",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "type",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "repeat",
+        "description": "Set the repeat mode.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "option",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "copyembed",
+        "description": "Copy a script from a message.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "message",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "vanity",
+        "description": "Award members for advertising your server.",
+        "category": "Config",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "music",
+        "description": "Audio filter commands.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "disconnect",
+        "description": "Disconnect from the voice channel.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "avatarhistory",
+        "description": "View a user's avatar history",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "snipe",
+        "description": "Snipe the last deleted message.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "index",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "lottery",
+        "description": "Enter the lottery with coins",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "amount",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "variables",
+        "description": "",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "updatetopgg",
+        "description": "Force update Top.gg stats.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "quote",
+        "description": "Repost a message.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "message",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "unban",
+        "description": "Unban a user from the server.",
+        "category": "Moderation",
+        "permissions": [
+            "ban_members"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "pingonjoin",
+        "description": "Mention new members when they join the server.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "screenshot",
+        "description": "Capture a screenshot of a webpage and perform content moderation.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "url",
+                "optional": false
+            },
+            {
+                "name": "delay",
+                "optional": true
+            },
+            {
+                "name": "full_page",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "shazam",
+        "description": "Recognize a song from an attachment.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "attachment",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "urbandictionary",
+        "description": "Define a word with Urban Dictionary.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "word",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "reminder",
+        "description": "Manage your reminders",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "vote",
+        "description": "Check your vote and donation status",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "dominant",
+        "description": "Extract the dominant color from an image.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "attachment",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "nickname",
+        "description": "Change a member's nickname.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_nicknames"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "nickname",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "upload",
+        "description": "Upload a file to Kraken Files.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "attachment",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "tag",
+        "description": "Create and manage custom tags.\nIf no subcommand is given, searches for and displays the requested tag.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "name",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "addtranslator",
+        "description": "Assign a user to translate a specific language",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "lang_code",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "level",
+        "description": "View your current rank.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "role",
+        "description": "Add or remove a role from a member.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "role",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "removetranslator",
+        "description": "Remove a user's translation permissions",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "steal",
+        "description": "Reply with the emojis you want to steal.",
+        "category": "Utility",
+        "permissions": [
+            "manage_expressions"
+        ],
+        "parameters": [
+            {
+                "name": "names",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "translators",
+        "description": "List all translators and their assigned languages",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "premium",
+        "description": "View Evict's premium subscription tiers.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "notify",
+        "description": "Manage notifications for vanities and usernames.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "shutdown",
+        "description": "Shutdown the bot.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "tracker",
+        "description": "",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "timeout",
+        "description": "Timeout a member from the server.",
+        "category": "Moderation",
+        "permissions": [
+            "moderate_members"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "duration",
+                "optional": true
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "voicemaster",
+        "description": "Make temporary voice channels in your server!",
+        "category": "VoiceMaster",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "untimeout",
+        "description": "Lift a member's timeout.",
+        "category": "Moderation",
+        "permissions": [
+            "moderate_members"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "shards",
+        "description": "View the bot shard latency.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "translator",
+        "description": "Translation management commands.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "truth",
+        "description": "Get a random truth question\n\nRating can be pg13 or r (NSFW channels only)",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "rating",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "ticket",
+        "description": "Manage support tickets.",
+        "category": "Config",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "emoji",
+        "description": "Various emoji management commands.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_expressions"
+        ],
+        "parameters": [
+            {
+                "name": "emoji",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "leaderboard",
+        "description": "View the richest users",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "gamble",
+        "description": "View available gambling games.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "wyr",
+        "description": "Get a random would you rather question\n\nRating can be pg13 or r (NSFW channels only)",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "rating",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "antiraid",
+        "description": "The base command for managing raid security.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "porn",
+        "description": "Porn search commands",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "about",
+        "description": "View information about the bot.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "clearsnipe",
+        "description": "Remove all sniped messages from the cache.",
+        "category": "Utility",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "editsnipe",
+        "description": "Snipe the last edited message.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "index",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "invite",
+        "description": "Get an invite link for the bot.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "reactionsnipe",
+        "description": "Snipe the last removed reaction.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "index",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "dare",
+        "description": "Get a random dare\n\nRating can be pg13 or r (NSFW channels only)",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "rating",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "translate",
+        "description": "Translate text with Google Translate.\nThis is an alias for the `google translate` command.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "destination",
+                "optional": true
+            },
+            {
+                "name": "text",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "profile",
+        "description": "Profile media management commands.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "afk",
+        "description": "Set an AFK status.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "status",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "streak",
+        "description": "View your current streak information",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "marry",
+        "description": "Propose marriage to another member",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "support",
+        "description": "Get an invite link for the bot's support server.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "inviteinfo",
+        "description": "View information about an invite.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "invite",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "serverbanner",
+        "description": "View a server's banner if one is present.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "invite",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "reverse",
+        "description": "Reverse search an image on Google.\nThis is an alias for the `google reverse` command.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "attachment",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "google",
+        "description": "Search a query on Google.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "query",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "blacktealeave",
+        "description": "Leave the current Blacktea game.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "recording",
+        "description": "Voice recording management commands",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "servericon",
+        "description": "View a server's icon if one is present.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "invite",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "banner",
+        "description": "View a user's banner if one is present.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "avreport",
+        "description": "Report an inappropriate image.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "image_id",
+                "optional": false
+            },
+            {
+                "name": "category",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "transcribe",
+        "description": "Transcribe audio from a file or message.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "joindm",
+        "description": "Configure join DM settings",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "memberbanner",
+        "description": "View a user's server banner.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "help",
+        "description": "Shows help about the bot, a command, or a category of commands.",
+        "category": "Uncategorized",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "command",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "userinfo",
+        "description": "View information about a user.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "sticker",
+        "description": "Various sticker related commands.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_expressions"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "animate",
+        "description": "",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "lockdown",
+        "description": "Prevent members from sending messages.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "serverinfo",
+        "description": "View information about the server.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "guild",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "counting",
+        "description": "View current counting configuration",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "membercount",
+        "description": "View the member count of a server.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "guild",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "sudo",
+        "description": "Run a command as another user.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            },
+            {
+                "name": "target",
+                "optional": false
+            },
+            {
+                "name": "command",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "wordstats",
+        "description": "View word statistics for this server.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "wolfram",
+        "description": "Solve a question with Wolfram Alpha.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "question",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "namehistory",
+        "description": "View a user's name history.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "bots",
+        "description": "View all bots in the server.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "chatgpt",
+        "description": "Ask AI a question.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "question",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "invites",
+        "description": "View invite statistics for yourself or another member.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "charinfo",
+        "description": "View unicode characters.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "characters",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "devices",
+        "description": "View a member's platforms.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "set",
+        "description": "Various server related commands.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "roles",
+        "description": "View the server roles.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "giveaway",
+        "description": "Manage giveaways.",
+        "category": "Utility",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "quit",
+        "description": "Quit your current job.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "rotate",
+        "description": "Rotate an image by a certain amount of degrees.",
+        "category": "Utility",
+        "permissions": [
+            "attach_files",
+            "embed_links"
+        ],
+        "parameters": [
+            {
+                "name": "degrees",
+                "optional": true
+            },
+            {
+                "name": "attachment",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "arena",
+        "description": "View available arena games and tournaments",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "inrole",
+        "description": "View members which have a role.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "role",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "hash",
+        "description": "Hash a string with a given algorithm.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "disboard",
+        "description": "Receive a reminder to bump the server.",
+        "category": "Config",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "reload",
+        "description": "Reload an extension.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "extensions",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "softban",
+        "description": "Ban then unban a member from the server.\n\nThis is used to cleanup messages from the member.",
+        "category": "Moderation",
+        "permissions": [
+            "ban_members"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "history",
+                "optional": true
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "channelinfo",
+        "description": "View information about a channel.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "boosters",
+        "description": "View server boosters.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "logger",
+        "description": "",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "module",
+                "optional": false
+            },
+            {
+                "name": "level",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "sync",
+        "description": "Sync all slash commands.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "unsync",
+        "description": "Unsync all slash commands.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "divorce",
+        "description": "Divorce your spouse",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "appeal",
+        "description": "Appeal system",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "marriage",
+        "description": "View marriage status",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "exportcommands",
+        "description": "Export command information to a JSON file.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "queue",
+        "description": "View the tracks in the queue.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "restart",
+        "description": "Restart the bot.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "unlockdown",
+        "description": "Allow members to send messages.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "spouses",
+        "description": "List all current spouses",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "emojis",
+        "description": "View all server emojis.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "adopt",
+        "description": "Adopt another member",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "blowjob",
+        "description": "Give a member a blowjob.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "push",
+        "description": "Push to GitHub.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "message",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "disown",
+        "description": "Disown an adopted member",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "setbank",
+        "description": "Set a user's bank balance.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "amount",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "confessions",
+        "description": "Configure anonymous confessions.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "leaveguild",
+        "description": "Leave a guild.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "guild_id",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "banlist",
+        "description": "View all banned members.",
+        "category": "Information",
+        "permissions": [
+            "ban_members"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "selfunban",
+        "description": "Have the bot unban you from the specified server.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "guild",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "guildinvites",
+        "description": "View all server invites.",
+        "category": "Information",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "family",
+        "description": "View family information",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "stickers",
+        "description": "View all server stickers.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "hide",
+        "description": "Hide a channel from a member or role.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            },
+            {
+                "name": "target",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "choose",
+        "description": "Choose between multiple options (separate with commas)",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "options",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "fortnite",
+        "description": "Various Fortnite commands.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "setbalance",
+        "description": "Set a user's balance.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "amount",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "tts",
+        "description": "Convert text to speech using OpenAI's TTS API.\nPremium users get 15 uses per hour and HD quality.\n\nVoices:\n- alloy: Versatile, balanced voice\n- echo: Warm, clear voice\n- fable: British accent, suitable for storytelling\n- onyx: Deep, authoritative voice\n- nova: Energetic female voice\n- shimmer: Gentle, welcoming voice",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "voice",
+                "optional": true
+            },
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "reveal",
+        "description": "Reveal a channel to a member or role.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            },
+            {
+                "name": "target",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "addrestores",
+        "description": "Add streak restore tokens to a user.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "amount",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "howgay",
+        "description": "Check how gay a member is.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "serveravatar",
+        "description": "View a user's avatar.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "givedonator",
+        "description": "Toggle a user's donator status.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "firstmessage",
+        "description": "View the first message sent.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "topic",
+        "description": "Set a channel's topic.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            },
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "start",
+        "description": "Start your economy journey with some starter coins.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "position",
+        "description": "Check member join position.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "anal",
+        "description": "Fuck a member anally.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "nuke",
+        "description": "Clone the current channel.\nThis action is irreversable and will delete the channel.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "slowmode",
+        "description": "Set the slowmode for a channel.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            },
+            {
+                "name": "delay",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "cleargnames",
+        "description": "Clear the guild name history.",
+        "category": "Information",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "timer",
+        "description": "Post recurring messages with an interval.",
+        "category": "Config",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "pin",
+        "description": "Pin a specific message.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": [
+            {
+                "name": "message",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "roleinfo",
+        "description": "View information about a role.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "role",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "blackteastop",
+        "description": "Stop an ongoing game of Blacktea.",
+        "category": "Fun",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "unpin",
+        "description": "Unpin a specific message.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": [
+            {
+                "name": "message",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "strip",
+        "description": "Strip a member of all dangerous permissions.",
+        "category": "Moderation",
+        "permissions": [
+            "administrator"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "penis",
+        "description": "Check how big a member's penis is.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "incident",
+        "description": "Manage bot incidents and status updates.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "nsfw",
+        "description": "Mark a channel as NSFW or SFW.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "unjail",
+        "description": "Unjail a member.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "8ball",
+        "description": "Ask the magic 8ball a question",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "question",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "audio",
+        "description": "Convert a video to an mp3.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "attachment",
+                "optional": true
+            },
+            {
+                "name": "flags",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "getbotinvite",
+        "description": "Get a bots invite by providing the bots ID.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "credits",
+        "description": "Check your available DALL-E credits.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "jail",
+        "description": "Jail a member.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "dadjoke",
+        "description": "Get a random dad joke",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "logging",
+        "description": "The base command for managing server logs.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "gnames",
+        "description": "View a guild's name history.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "guild",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "imagine",
+        "description": "Generate images using DALL-E 3.\nPremium users get $15 worth of credits per 2 weeks.\nFree users get 2 generations per day.\n\nQuality:\n- standard: Basic quality ($0.040 per image)\n- hd: Higher quality ($0.080 per image)\n\nSize:\n- 1024x1024: Square image\n- 1024x1792: Portrait\n- 1792x1024: Landscape",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "quality",
+                "optional": true
+            },
+            {
+                "name": "size",
+                "optional": true
+            },
+            {
+                "name": "prompt",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "fact",
+        "description": "Get a random fun fact",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "describe",
+        "description": "Get an AI description of an image using GPT-4 Vision",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "image",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "weather",
+        "description": "Get the current weather for a city/country",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "location",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "emojify",
+        "description": "Convert text to regional indicator emojis",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "donator",
+        "description": "View information about donator perks and benefits.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "birthday",
+        "description": "View your birthday.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "drag",
+        "description": "Drag member(s) to the voice channel.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": [
+            {
+                "name": "members",
+                "optional": false
+            },
+            {
+                "name": "channel",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "setme",
+        "description": "Enable the jail system in your server.\nRequires the bot to have Manage Roles and Manage Channels permissions.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_guild",
+            "manage_channels",
+            "manage_roles",
+            "view_channel"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "convert",
+        "description": "Convert an image to a different format.",
+        "category": "Utility",
+        "permissions": [
+            "attach_files",
+            "embed_links"
+        ],
+        "parameters": [
+            {
+                "name": "format",
+                "optional": true
+            },
+            {
+                "name": "attachment",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "instance",
+        "description": "Base command for instance management",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "play",
+        "description": "Play a track or playlist in the voice channel.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "query",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "coinflip",
+        "description": "Flip a coin one or more times",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "times",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "unsetme",
+        "description": "Disable the jail system in your server.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_guild",
+            "manage_channels",
+            "manage_roles",
+            "view_channel"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "reversetext",
+        "description": "Reverse any text",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "compress",
+        "description": "Compress the quality of an image.",
+        "category": "Utility",
+        "permissions": [
+            "attach_files",
+            "embed_links"
+        ],
+        "parameters": [
+            {
+                "name": "amount",
+                "optional": true
+            },
+            {
+                "name": "attachment",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "docket",
+        "description": "Manage work dockets and tickets.",
+        "category": "Owner",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "password",
+        "description": "Generate a random secure password",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "length",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "moveall",
+        "description": "Move all members to another voice channel.\nThis is an alias for the `drag all` command.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "poll",
+        "description": "Poll management commands",
+        "category": "Information",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "embedsetup",
+        "description": "Create an embed using buttons and return an embed code.",
+        "category": "Utility",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "pause",
+        "description": "Pause the current track.",
+        "category": "Audio",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "fakepermissions",
+        "description": "Restrict moderators to only use Evict for moderation.",
+        "category": "Moderation",
+        "permissions": [
+            "guild_owner"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "complete",
+        "description": "Complete your text using GPT-3.5",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "prompt",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "crypto",
+        "description": "View information about a transaction.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "transaction",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "achievement",
+        "description": "Generate a Minecraft achievement with custom text",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "instances",
+        "description": "View information about instance hosting and access.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "shop",
+        "description": "View available items in the shop",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "hardban",
+        "description": "Permanently ban a user from the server.\n\nOnly the server owner is able to unban them.\nRe-running this command will remove the hard ban.",
+        "category": "Moderation",
+        "permissions": [
+            "ban_members"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "history",
+                "optional": true
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "calling",
+        "description": "Generate a 'mom come pick me up im scared' meme",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "timezone",
+        "description": "View your local time.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "captcha",
+        "description": "Generate a custom captcha image",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "blackteaplayers",
+        "description": "View the current players in the Blacktea game.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "didyoumean",
+        "description": "Generate a Google 'did you mean' image\n\nFlags:\n--text: The searched text\n--text2: The 'did you mean' suggestion",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "flags",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "tictactoe",
+        "description": "Play Tic Tac Toe with another member.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "opponent",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "supreme",
+        "description": "Generate a supreme logo with custom text",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "modhistory",
+        "description": "View moderation history for a moderator.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": [
+            {
+                "name": "moderator",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "uwulock",
+        "description": "Uwuify a person's messages.\nRe-running this command will remove the uwulock.",
+        "category": "Fun",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "warn",
+        "description": "Warn a member.",
+        "category": "Moderation",
+        "permissions": [
+            "moderate_members"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "reason",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "rockpaperscissors",
+        "description": "Play Rock Paper Scissors with another member.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "opponent",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "reddit",
+        "description": "Look up a Subreddit.\nYou can also stream new submissions.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "subreddit",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "facts",
+        "description": "Generate a 'facts book' meme",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "history",
+        "description": "View moderation history for a user.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "scrapbook",
+        "description": "Create scrapbook letters.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "drip",
+        "description": "Give someone the drip",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "picperms",
+        "description": "Toggle picture permissions for a user.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": false
+            },
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "blacktea",
+        "description": "Start a game of Blacktea.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "scene",
+        "description": "",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "impersonate",
+        "description": "Make a user say something.",
+        "category": "Fun",
+        "permissions": [
+            "manage_webhooks"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            },
+            {
+                "name": "content",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "gallery",
+        "description": "Restrict channels to only allow images.",
+        "category": "Config",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "gun",
+        "description": "Point a gun at someone",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "rolebuttons",
+        "description": "",
+        "category": "Config",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "daily",
+        "description": "Claim your daily reward.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "fuck",
+        "description": "Fuck someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "ignore",
+        "description": "Prevent a channel or member from invoking commands.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": [
+            {
+                "name": "target",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "wanted",
+        "description": "Generate a wanted poster",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "shutup",
+        "description": "Automatically delete a person's messages.\nRe-running this command will remove the shutup.",
+        "category": "Fun",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "alert",
+        "description": "Generate an iPhone alert",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "purge",
+        "description": "Remove messages which meet a criteria.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "amount",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "pooh",
+        "description": "Generate a Tuxedo Pooh meme",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "flags",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "reactionrole",
+        "description": "Allow members to assign roles to themselves.",
+        "category": "Config",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "howretarded",
+        "description": "Check how retarded a member is.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "render",
+        "description": "",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "cuddle",
+        "description": "Cuddle someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "uwuify",
+        "description": "Uwuify a message.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "msg",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "drake",
+        "description": "Generate a Drake meme",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "flags",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "poke",
+        "description": "Poke someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "oogway",
+        "description": "Generate an Oogway quote meme",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "kiss",
+        "description": "Kiss someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "hug",
+        "description": "Hug someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "pat",
+        "description": "Pat someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "sadcat",
+        "description": "Generate a sad cat meme",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "text",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "tickle",
+        "description": "Tickle someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "command",
+        "description": "Fine tune commands which can be used in your server.\n\nIf you were to run this command on a command like `voicemaster`,\nit would disable or restrict every subcommand as well.\n\nModerators are able to use the command regardless of the settings.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "lick",
+        "description": "Lick someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "flag",
+        "description": "Play a flag guessing game.\nDifficulty options: easy, medium, hard",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "difficulty",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "slap",
+        "description": "Slap someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "blend",
+        "description": "Mix two emojis together and create a jumbo version.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "emoji1",
+                "optional": false
+            },
+            {
+                "name": "emoji2",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "feed",
+        "description": "Feed someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "vape",
+        "description": "Check what vape flavor you have enabled.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "punch",
+        "description": "Punch someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "highfive",
+        "description": "Highfive someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "bite",
+        "description": "Bite someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "bully",
+        "description": "Bully someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "bonk",
+        "description": "Bonk someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "cringe",
+        "description": "Cringe at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "dog",
+        "description": "Sends qilla's dog to chat.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "shoot",
+        "description": "Shoot someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "cleanup",
+        "description": "Remove bot invocations and messages from bots.",
+        "category": "Moderation",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": [
+            {
+                "name": "amount",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "wave",
+        "description": "Wave to someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "flags",
+        "description": "Start a game of Flags.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "happy",
+        "description": "Be happy with someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "howlesbian",
+        "description": "Check how much of a lesbian a member is.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "peck",
+        "description": "Peck someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "chunkban",
+        "description": "Ban a certain number of newest members from the server.",
+        "category": "Moderation",
+        "permissions": [
+            "ban_members"
+        ],
+        "parameters": [
+            {
+                "name": "amount",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "socials",
+        "description": "View your or another user's profile.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "lurk",
+        "description": "Lurk at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "sleep",
+        "description": "Sleep with someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "autorole",
+        "description": "Automatically assign roles to new members.",
+        "category": "Config",
+        "permissions": [
+            "manage_roles"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "shrug",
+        "description": "Shrug at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "wink",
+        "description": "Wink at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "dance",
+        "description": "Dance with someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "immune",
+        "description": "Make a user or role immune to moderation actions.",
+        "category": "Moderation",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "yawn",
+        "description": "Yawn someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "nom",
+        "description": "Nom someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "awoo",
+        "description": "Awoo at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "yeet",
+        "description": "Yeet someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "think",
+        "description": "Think about someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "bored",
+        "description": "Be bored with someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "balance",
+        "description": "Check your or another user's balance.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "blush",
+        "description": "Blush at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "boosterrole",
+        "description": "Assign yourself a custom color role.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "color",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "stare",
+        "description": "Stare at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "nod",
+        "description": "Nod at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "handhold",
+        "description": "Hold hands with someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "smug",
+        "description": "Smug at someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "nutkick",
+        "description": "Nutkick someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "reaction",
+        "description": "Automatically react to messages.",
+        "category": "Config",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "spank",
+        "description": "Spank someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "info",
+        "description": "View server information.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "blunt",
+        "description": "Smoke a blunt.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "reskin",
+        "description": "Customize the outputs for Evict's command outputs.",
+        "category": "Premium",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "kill",
+        "description": "Kill someone.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "response",
+        "description": "Automatically respond to messages.",
+        "category": "Config",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "ping",
+        "description": "View the bot's latency.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "verify",
+        "description": "View current verification settings for the server.",
+        "category": "Config",
+        "permissions": [
+            "administrator"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "avatar",
+        "description": "View a user's avatar.",
+        "category": "Information",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "pack",
+        "description": "Insult another user.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "pussylick",
+        "description": "Lick a members pussy.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "cum",
+        "description": "Cum on a member.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "speechbubble",
+        "description": "Add a speech bubble to an image/gif.",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "image_url",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "alias",
+        "description": "The base command for managing command shortcuts.\n\nThis is useful for commands that are used frequently or have long names.\nWhen ran, aliases will accept any additional arguments and append them to the stored alias.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "media",
+        "description": "Media manipulation commands",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "threesome",
+        "description": "Have a threesome with two other members.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "nowplaying",
+        "description": "View your current Last.fm track.",
+        "category": "Lastfm",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "actions",
+        "description": "Roleplay commands for DMs.",
+        "category": "Roleplay",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "webhook",
+        "description": "Forward messages through webhooks.",
+        "category": "Config",
+        "permissions": [
+            "manage_webhooks"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "distort",
+        "description": "",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "reposter",
+        "description": "Fine tune reposters which can be used in your server.",
+        "category": "Social",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "welcome",
+        "description": "The base command for managing greet messages.\n\nWelcome messages are sent when a user joins the server.\nThey can be configured to send in multiple channels with different messages.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "spotify",
+        "description": "Search a query on Spotify.",
+        "category": "Lastfm",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "query",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "overlay",
+        "description": "",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "pinterest",
+        "description": "Look up a user on Pinterest.\nYou can also stream saved pins from a user.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "roblox",
+        "description": "Look up a user on Roblox.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "suggestion",
+        "description": "Let your server members suggest stuff for your server.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "transfer",
+        "description": "Transfer coins to another user.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            },
+            {
+                "name": "amount",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "osu",
+        "description": "Look up a user on osu!",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "username",
+                "optional": false
+            },
+            {
+                "name": "map",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "goodbye",
+        "description": "The base command for managing leave messages.\n\nGoodbye messages are sent when a user leaves the server.\nThey can be configured to send in multiple channels with different messages.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "cards",
+        "description": "Yu-Gi-Oh! card collection commands.",
+        "category": "Yugioh",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "statistics",
+        "description": "Set channels to display server statistics.",
+        "category": "Config",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "cardchannel",
+        "description": "Set the current channel as a card drop channel.",
+        "category": "Yugioh",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": [
+            {
+                "name": "channel",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "tiktok",
+        "description": "Look up a user on TikTok.\nYou can also stream new posts from a user.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "boost",
+        "description": "The base command for managing boost messages.\n\nBoost messages are sent when a user boosts the server.\nThey can be configured to send in multiple channels with different messages.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "lovense",
+        "description": "View Lovense device status for yourself or another member.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "member",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "highlight",
+        "description": "Receive keyword notifications.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "pet",
+        "description": "Pet management commands",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "prefix",
+        "description": "View the current server prefixes.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "bank",
+        "description": "Bank management commands.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "starboard",
+        "description": "Archive important messages.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "snapchat",
+        "description": "Look up a user on Snapchat.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "instagramu",
+        "description": "Fetch information about an Instagram user.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "cashapp",
+        "description": "Look up a user on CashApp.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "image",
+        "description": "Search for images on Google.",
+        "category": "Utility",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "query",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "twitter",
+        "description": "Fetch information about a Twitter user.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "business",
+        "description": "Business management commands.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "instagramstory",
+        "description": "Fetch stories on an Instagram user.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "thread",
+        "description": "Watch threads to prevent them from being archived.",
+        "category": "Config",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "invoke",
+        "description": "Set custom moderation invoke messages.\nAccepts the `moderator` and `reason` variables.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "work",
+        "description": "Work to earn money.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "whitelist",
+        "description": "Restrict access to your server.",
+        "category": "Config",
+        "permissions": [
+            "manage_guild"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "jobs",
+        "description": "View available job listings.",
+        "category": "Economy",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "twitch",
+        "description": "Look up a user on Twitch.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "user",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "transform",
+        "description": "",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "mini",
+        "description": "Get responses using OpenAI's O1-mini model.\nPremium users get $15 worth of credits per 2 weeks.\nFree users get 10 uses per day.\n\nCost: $0.01 per response",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "prompt",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "publisher",
+        "description": "Automatically publish announcement messages.",
+        "category": "Config",
+        "permissions": [
+            "manage_channels"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "sticky",
+        "description": "Stick messages to the bottom of a channel.",
+        "category": "Config",
+        "permissions": [
+            "manage_messages"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "soundcloud",
+        "description": "Search a query on SoundCloud.\nYou can also stream new tracks from a user.",
+        "category": "Social",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "query",
+                "optional": false
+            }
+        ]
+    },
+    {
+        "name": "lastfm",
+        "description": "Interact with your Last.fm account.",
+        "category": "Lastfm",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "filter",
+        "description": "",
+        "category": "Fun",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    },
+    {
+        "name": "me",
+        "description": "Clean up your messages.",
+        "category": "Premium",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": [
+            {
+                "name": "amount",
+                "optional": true
+            }
+        ]
+    },
+    {
+        "name": "antinuke",
+        "description": "Protect your server from malicious administrators.",
+        "category": "Config",
+        "permissions": [
+            "N/A"
+        ],
+        "parameters": []
+    }
+]

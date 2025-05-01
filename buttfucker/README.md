@@ -1,0 +1,4 @@
+# used on {
+    `honest`,
+    `greed`,
+}
